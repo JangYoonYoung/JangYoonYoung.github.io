@@ -1,0 +1,67 @@
+<div style="margin-left:20px; margin-top:20px;">
+    <a href="https://bootstrap-homework-jangyoonyoung.c9users.io" class="my_button2">메인 페이지 가기</a><br>
+</div>
+
+<h1>Edit Diary ✏️</h1>
+<br><br>
+
+<form action='/home/update/<%=@post.id%>' method = 'post'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    title : <input type="text" name="post_title" value = "<%= @post.title%>"><br><br>
+    content : <textarea name="post_content"><%= @post.content %></textarea><br><br>
+    date : <input type="date" name="post_date" value = "<%= @post.date %>"><br><br><br>
+    <button type="submit" class="my_button">Submit</button>
+</form>
+
+<style>
+    body, html {
+        background-image: url("../img/63455.jpg"); !important
+    }
+    h1, a {
+        color:#000000;
+    }
+    
+    h1, form {
+        color:#000000;
+        margin: 0 auto;
+        width:250px;
+    }  
+    
+    .my_button{
+      display: table-cell;
+      border: 1.6px solid #F8E0E6;
+      color: #848484;
+      background-color: transparent;
+      border-radius: 20px;
+      height: 30px;
+      width: 90px;
+      text-align: center;
+      font-size: 1.0em;
+      vertical-align: middle;
+    }
+
+    .my_button:hover{
+      background-color: #F8E0E6;
+      color: white;
+    }
+    
+    .my_button2{
+      display: table-cell;
+      border: 1.6px solid #F8E0E6;
+      color: #848484;
+      background-color: transparent;
+      border-radius: 20px;
+      height: 30px;
+      width: 140px;
+      text-align: center;
+      font-size: 1.0em;
+      vertical-align: middle;
+    }
+
+    .my_button2:hover{
+      background-color: #F8E0E6;
+      color: black;
+    }
+    
+    * { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+</style>

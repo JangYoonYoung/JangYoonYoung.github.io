@@ -1,0 +1,92 @@
+<div><br></div>
+<div class="div1" style="margin:auto;"><h1>List of <br> My Diary</h1></div>
+
+<div style="float:right; margin-right:20px"><a href='/home/new' class="my_button2">Write Diary</a><br></div>
+<div style="float:left; margin-left:20px"><a href="https://bootstrap-homework-jangyoonyoung.c9users.io" class="my_button"> 메인 페이지 가기</a></div>
+
+<div style="margin:auto; margin-right:20px; margin-left:20px;">
+<table class="table">
+    <thead>
+        <tr class="info">
+            <th>#</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%@posts.each do |p|%>
+            <tr>
+                <td><%=p.id%></td>
+                <td><%=p.title%></td>
+                <td><%=p.content%></td>
+                <td><%=p.date%></td>
+                <td><a href="/home/edit/<%=p.id%>">edit</a></td>
+                <td><a href="/home/delete/<%=p.id%>" data-confirm="진짜 삭제?">delete</a></td>
+            </tr>
+         <%end%>
+    </tbody>
+</table>
+</div>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+    body, html {
+        background-image: url("../img/63455.jpg");
+    }
+    h1, a {
+        color:#000000;
+    }
+    
+    form, h1, a {
+        color:#000000;
+        margin: 0 auto;
+        width:250px;
+    }  
+    
+    .my_button{
+      display: table-cell;
+      border: 1.6px solid #F8E0E6;
+      color: #848484;
+      background-color: transparent;
+      border-radius: 20px;
+      height: 30px;
+      width: 140px;
+      text-align: center;
+      font-size: 1.0em;
+      vertical-align: middle;
+    }
+ 
+
+    .my_button:hover{
+      background-color: #F8E0E6;
+      color: black;
+    }
+    
+    .my_button2{
+      display: table-cell;
+      border: 1.6px solid #F8E0E6;
+      color: #848484;
+      background-color: transparent;
+      border-radius: 20px;
+      height: 30px;
+      width: 100px;
+      text-align: center;
+      font-size: 1.0em;
+      vertical-align: middle;
+    }
+
+    .my_button2:hover{
+      background-color: #F8E0E6;
+      color: black;
+    }
+    
+    * { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+</style>
